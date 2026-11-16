@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Copy Cat: The Matrix Exam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="app">
+  <div class="hud">
+    <h1>Copy Cat</h1>
+    <span>Lives <b id="lives">❤️❤️❤️</b></span>
+    <span>Score <b id="score">0</b></span>
+    <span>Streak <b id="streak">0</b></span>
+    <span>Best <b id="best">0</b></span>
+    <button class="chip" id="sfx" type="button" aria-label="Toggle sound">🔊</button>
+  </div>
+  <div class="teacher away" id="teacher"><span class="face" id="face">🧑‍🏫</span><span id="tmsg">Back turned. Coast is clear.</span></div>
+  <div class="timer"><i id="bar"></i></div>
+
+  <div class="card"><h2 id="qtitle">Question</h2><div class="problem" id="problem"></div></div>
+
+  <div class="card neighbor" id="neighbor">
+    <h2>Alex’s paper (hold Tab or the button to peek)</h2>
+    <div class="tex" id="ntex"></div>
+    <button class="peekbtn" id="peekbtn">👀 Hold to peek</button>
+  </div>
+
+  <div class="card">
+    <h2>Your answer, written in LaTeX</h2>
+    <div class="row">
+      <input type="text" id="ans" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}" aria-label="Your answer">
+      <button class="go" id="submit">Hand it in</button>
+    </div>
+    <div class="row" style="margin-top:8px" id="chips"></div>
+    <div class="preview" id="preview">Preview appears as you type.</div>
+  </div>
+  <p style="color:var(--muted);font-size:.9rem">Alex is confident, not always correct. Don’t type or peek while the teacher is watching.</p>
+</main>
+
+<div class="toast" id="toast"></div>
+<div class="meme" id="meme" aria-hidden="true"></div>
+
+<div class="over" id="start"><div class="box">
+  <h2>Copy Cat: the matrix exam</h2>
+  <p>Alex sits next to you and always has the answer. Peek at their paper, type the LaTeX, and hand it in.</p>
+  <p>Three rules: Alex is wrong about 1 time in 3, so check the math. The teacher turns around without warning. If she catches you peeking or typing, you lose a life.</p>
+  <button class="go" id="play">Start exam</button>
+  <button class="chip" id="testmeme" type="button">Test jumpscare</button>
+</div></div>
+
+<div class="over hide" id="over"><div class="box">
+  <span class="stamp">Academic probation</span>
+  <h2 id="otitle">Game over</h2>
+  <p id="otext"></p>
+  <button class="go" id="again">Retake exam</button>
+</div></div>
+
+<script src="js/latex.js"></script>
+<script src="js/problems.js"></script>
+<script src="js/meme.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
