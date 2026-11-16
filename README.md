@@ -7,7 +7,7 @@ you lose a life.
 
 <img width="1813" height="842" alt="image" src="https://github.com/user-attachments/assets/767fa24c-b0ae-40c7-9c16-1592199bab97" />
 
-**[Play it live here!](YOUR-LIVE-LINK)**
+**[Play it live here!](https://simondelvillar.github.io/copy-cat-game/)**
 
 ## Features
 - Matrix and arithmetic problems: add, subtract, scalar multiply, 2×2 product, determinant
